@@ -1,0 +1,168 @@
+<html>
+    <head>
+        <link rel="stylesheet" href="dec.css" class="rel">
+<!-- Latest compiled and minified CSS -->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@3.3.7/dist/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+<!-- Optional theme -->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@3.3.7/dist/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+
+<!-- Latest compiled and minified JavaScript -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@3.3.7/dist/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+    </head>
+    <body>
+
+        <div class="container">
+            <div id="wrapper_1">
+                <div class="row bg_3">
+                    <h4>Currency Converter</h4>
+
+                    <div class="blockmaker">
+                    <div class="col-3 input-effect">
+                        <select id="from" class="dropdown1" >  
+                            <option value = "BTC"> BTC   </option>  
+                            <option value = "ETH"> ETH   </option>  
+                            <option value = "BNB"> BNB  </option>  
+                            <option value = "LTC"> LTC  </option>  
+                            <option value = "BUSD"> BUSD   </option>  
+                            <option value = "TRX"> TRX   </option>  
+                            <option value = "USDT"> USDT  </option>  
+                            <option value = "XRP"> XRP  </option>   
+                        </select>
+                        <label>From</label>
+                        <span class="focus-border">
+                            <i></i>
+                        </span>
+                    </div>
+
+
+                    <div class="col-3 input-effect">
+                        <select id="to" class="dropdown1" >  
+                            <option value = "BTC"> BTC   </option>  
+                            <option value = "ETH"> ETH   </option>  
+                            <option value = "BNB"> BNB  </option>  
+                            <option value = "LTC"> LTC  </option>
+                            <option value = "BUSD"> BUSD   </option>  
+                            <option value = "TRX"> TRX   </option>  
+                            <option value = "USDT"> USDT  </option>  
+                            <option value = "XRP"> XRP  </option>    
+                        </select>
+                        <label>To</label>
+                        <span class="focus-border">
+                            <i></i>
+                        </span>
+                    </div>
+                    </div>
+<!--
+                    <div class="col-3 input-effect">
+                        <input id="symbol" class="effect-19" type="text" placeholder="eg. BNBBTC" value="">
+                        
+                        <label>From</label>
+                        <span class="focus-border">
+                            <i></i>
+                        </span>
+                    </div>
+                    <div class="col-3 input-effect">
+                        <input id="symbol" class="effect-19" type="text" placeholder="eg. BNBBTC" value="">
+                        
+                        <label>To</label>
+                        <span class="focus-border">
+                            <i></i>
+                        </span>
+                    </div>   
+
+-->
+                    <div class="col-3 input-effect hide">
+                        <input id="side" class="effect-20" type="text" placeholder="e.g SELL/BUY" value="">
+                        <label>SIDE</label>
+                        <span class="focus-border">
+                            <i></i>
+                        </span>
+                    </div>
+                    <div class="col-3 input-effect">
+                        <input id="quantity" class="effect-21" type="text" placeholder="eg. Coin Quantity" value="">
+                        <label>AMOUNT</label>
+                        <span class="focus-border">
+                            <i></i>
+                        </span>
+                    </div>
+            <div class="block my-input-group" id="moin"><button class="button">Convert</button></div>
+            <div id="content"></div>
+                </div>
+                </div>
+<div id="vertical_line"></div>
+            <div >
+                <h4 class="title">Current Balance</h4>
+                <form>
+                    <div class="my-input-group">
+                        <div class="flex-container">
+                            <div id ="b1" class="flex-item-left">
+                                    <div class="currencyname">Loading..</div>
+                                    <div class = "currentbal" >Loading..</div>
+                            </div>
+                              <div id ="b2" class="flex-item-left">
+                                    <div class="currencyname" >Loading..</div>
+                                    <div class = "currentbal" >Loading..</div>
+                            </div>
+                                <div id ="b3" class="flex-item-left">
+                                    <div  class="currencyname" >Loading..</div>
+                                    <div class = "currentbal" >Loading..</div>
+                            </div>
+                                <div id ="b4" class="flex-item-left">
+                                    <div  class="currencyname" >Loading..</div>
+                                    <div class = "currentbal" >Loading..</div>
+                            </div>
+                          
+                          </div>
+                          <div class="flex-container">
+                            <div id ="b5" class="flex-item-left">
+                                    <div class="currencyname" >Loading..</div>
+                                    <div class = "currentbal" >Loading..</div>
+                            </div>
+                              <div id ="b6" class="flex-item-left">
+                                    <div  class="currencyname" >Loading..</div>
+                                    <div class = "currentbal" >Loading..</div>
+                            </div>
+                                <div id ="b7" class="flex-item-left">
+                                    <div  class="currencyname" >Loading..</div>
+                                    <div class = "currentbal" >Loading..</div>
+                            </div>
+                                <div id ="b8" class="flex-item-left">
+                                    <div  class="currencyname" >Loading..</div>
+                                    <div class = "currentbal" >Loading..</div>
+                            </div>
+                          
+                          </div>
+                    </div>
+                </form>
+                <hr>
+                <h4 class="title">History</h4>
+                <div class="my-input-group">
+                    <ul id = "historyList">
+                    </ul>
+                  </div>
+            </div>
+        </div>
+
+
+        
+
+
+
+
+
+
+
+
+    </body>
+    <script src="script.js"></script>
+
+    
+
+
+
+</html>
+
+
+
+
