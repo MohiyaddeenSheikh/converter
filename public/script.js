@@ -1,4 +1,5 @@
-   var animateButton = function(e) {
+var PROXY = 'http://ec2-52-206-247-119.compute-1.amazonaws.com:5000'
+var animateButton = function(e) {
         e.preventDefault;
         //reset animation
         e.target.classList.remove('animate');
@@ -10,7 +11,7 @@
           e.target.classList.remove('animate');
         },6000);
       };
-      
+        
 var t = function(e){
     var c = 1
     if(c == 1){
@@ -24,7 +25,7 @@ var t = function(e){
             document.getElementById('content').innerHTML= "Pair not exist. !";
             e.target.classList.add('error');
         }else{
-            let fetchRes = fetch('http://localhost:5000/moin/'+symbol+"/"+quantity);
+            let fetchRes = fetch(PROXY+'/moin/'+symbol+"/"+quantity);
             fetchRes.then(res=>res.json()).then(d=>{document.getElementById('content').innerHTML=("Transfered on Rate: " + d.fills[0].price+" ["+d.symbol+"]"+"<br>"+"Trade ID : "+d.fills[0].tradeId)}).then(a=>{balance()}).then(a=>{history(symbol)})
 
             e.target.classList.add('success');
@@ -46,7 +47,7 @@ var classname = document.getElementsByClassName("button");
 
 function history(symbol){
     
-    let fetchRes = fetch('http://localhost:5000/history/'+String(symbol));
+    let fetchRes = fetch(PROXY+'/history/'+String(symbol));
     fetchRes.then(res=>res.json()).then(d=>{
         console.log(d);
         d = myArrayDictSort(d)
@@ -85,7 +86,7 @@ function myArrayDictSort(res){
 }
 
 function balance() {
-    let fetchRes = fetch('http://localhost:5000/balance');
+    let fetchRes = fetch(PROXY+'/balance');
     fetchRes.then(res=>res.json()).then(d=>{
     document.getElementById('b1').children[0].innerHTML=d.balances[0]['asset'];
     document.getElementById('b1').children[1].innerHTML=d.balances[0]['free'];
